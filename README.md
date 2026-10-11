@@ -1,26 +1,40 @@
-# Práctica 1: Control de dispositivos básicos
+# ⚙️ Portafolio de Prácticas - Sistemas Embebidos
 
-## 📋 Introducción
-Los sistemas embebidos forman parte esencial de la automatización moderna, permitiendo procesar información del entorno y responder de manera automática. En esta práctica se implementaron sistemas de control digital básicos utilizando una tarjeta de desarrollo **ESP32** y el entorno de programación Arduino IDE junto con simulaciones en Wokwi.
-
-## 🎯 Objetivo General
-Implementar sistemas de control digital utilizando una tarjeta ESP32 para accionar distintos tipos de cargas (LED, motor DC y foco de corriente alterna), comprendiendo el uso de señales digitales, niveles lógicos (HIGH/LOW) y elementos de potencia o aislamiento.
+Repositorio global que contiene la documentación, códigos fuente y diseños de simulación de las prácticas correspondientes a la asignatura de **Sistemas Embebidos** de la **Universidad Politécnica del Bicentenario**[cite: 5, 10].
 
 ---
 
-## 🛠️ Estructura de las Subprácticas
+## 👨‍🎓 Datos Generales
+* **Asignatura:** Sistemas Embebidos[cite: 5, 10]
+* **Profesor:** Hugo Antonio Méndez Guzmán[cite: 5, 10]
+* **Grupo:** IME 702[cite: 10]
 
-1. **Práctica 1.1: Control de LED**
-   - **Descripción:** Control de encendido y apagado mediante dos botones pulsadores (`INPUT_PULLUP`) y un LED indicador con resistencia limitadora de 1 kΩ conectados al GPIO 2.
-2. **Práctica 1.2: Control de Motor DC**
-   - **Descripción:** Control de un motor de corriente directa mediante un transistor NPN (2N2222) como interruptor electrónico y una fuente externa de 5 V con diodo de protección flyback.
-3. **Práctica 1.3: Control de Socket y Foco (AC)**
-   - **Descripción:** Control de un foco de corriente alterna (110-127 V AC) utilizando un módulo relevador (relay) para asegurar el aislamiento eléctrico entre el circuito de control de bajo voltaje y el de potencia.
+### Integrantes del Equipo:
+* Alejandro Almanza Pérez[cite: 5, 10]
+* Vanessa Guadalupe Soria Zavala[cite: 5, 10]
+* Adán Rodríguez Ortiz[cite: 5, 10]
+* América Aranzazu Rodríguez Pérez[cite: 5, 10]
 
 ---
 
-## 📂 Contenido del Repositorio
-- `src/main.cpp`: Código fuente desarrollado en Arduino IDE.
-- `diagram.json`: Diagrama esquemático de simulación en Wokwi.
-- `docs/reporte.pdf`: Reporte completo de la práctica en formato PDF.
-- `img/`: Carpeta con capturas de pantalla de las simulaciones y el montaje físico en protoboard.
+## 📂 Estructura del Repositorio
+
+El repositorio se encuentra organizado de forma modular por cada práctica desarrollada a lo largo de la unidad[cite: 1]:
+
+### 📁 Práctica 1: Control de dispositivos básicos
+* **Descripción:** Implementación de sistemas de control digital básicos mediante una tarjeta de desarrollo ESP32, evaluando el comportamiento de las entradas digitales con botones y diferentes tipos de cargas de salida[cite: 5].
+* **Variaciones incluidas:**
+  1. *Control de LED* (Salida digital directa con resistencia limitadora)[cite: 5].
+  2. *Control de Motor DC* (Conmutación de potencia mediante transistor NPN y diodo flyback)[cite: 5].
+  3. *Control de Socket y Foco AC* (Aislamiento eléctrico y control de alto voltaje mediante módulo relevador)[cite: 5].
+
+### 📁 Práctica 2: Control ON-OFF de nivel
+* **Descripción:** Diseño e implementación de un sistema automático de control de nivel de líquidos en un tanque[cite: 16]. Emplea un sensor ultrasónico HC-SR04 para la medición de distancia, una pantalla LCD 16x2 con interfaz I2C para la visualización de parámetros en tiempo real, botones de configuración de umbrales ($LL$ y $HL$), y un sistema de relevadores para accionar de forma cíclica las bombas de llenado y drenado[cite: 16].
+
+---
+
+## 🛠️ Stack Tecnológico
+* **Microcontrolador:** ESP32 DevKit C V4[cite: 5]
+* **Entorno de Desarrollo:** Arduino IDE[cite: 5]
+* **Simulación:** Wokwi[cite: 5]
+* **Lector de Periféricos:** Librerías `LiquidCrystal_I2C`[cite: 20]
